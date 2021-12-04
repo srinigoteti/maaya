@@ -1,1 +1,1 @@
-# maaya
+# maaya azure deployment
