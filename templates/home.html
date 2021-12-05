@@ -14,19 +14,20 @@
 
 <body>
  <div class="login">
-	<h1>Jaipur's Air Quality Index Index</h1>
+	<h1>Upload CPS</h1>
+      <hr>
 
-     <!-- Main Input For Receiving Query to our ML -->
-    <form action="{{ url_for('predict')}}"method="post">
-      <input type="text" name="interview_score3" placeholder="Maximum Wind Speed" required="required" /><br>
-    	<input type="text" name="experience" placeholder="Maximum Temperature" required="required" /><br>
-        <input type="text" name="test_score" placeholder="Minimum Temperature" required="required" /><br>
-        <input type="text" name="interview_score5" placeholder="Average Temperature" required="required" /><br>
-        <input type="text" name="interview_score6" placeholder="Average Wind Speed" required="required" /><br>
+      <form action="/magic" method="POST" enctype="multipart/form-data">
 
-       
+        <div class="form-group">
+          <label>Select CPS</label>
+          <div class="custom-file">
+            <input type="file" class="custom-file-input" name="file" id="file">
+          </div>
+        </div>
 
-        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+        <button type="submit" class="btn btn-primary btn-block btn-large">Upload</button>
+
     </form>
 
    <br>
